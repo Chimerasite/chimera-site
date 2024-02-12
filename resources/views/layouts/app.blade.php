@@ -20,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css'])
         @livewireStyles
     </head>
     <body class="antialiased bg-gray-100 overflow-x-hidden font-primary">

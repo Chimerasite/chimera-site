@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\XeroFanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// Project Xero Fan Zone
+Route::get('/xero-fan-zone', [XeroFanController::class, 'home'])->name('xero.home');
+Route::get('/xero-fan-zone/foraging', [XeroFanController::class, 'foragingShow'])->name('xero.foraging');
+Route::get('/xero-fan-zone/foraging/edit', [XeroFanController::class, 'foragingEdit'])->middleware(['auth', 'admin'])->name('xero.foraging-edit');
 
 require __DIR__.'/auth.php';
