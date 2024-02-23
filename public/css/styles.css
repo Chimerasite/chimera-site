@@ -1,0 +1,14 @@
+@media only screen and (min-width: 1024px) {
+    main {
+        height: calc(100dvh - 80px);
+    }
+}
+
+.nav-height{
+    height: calc(100dvh - 80px);
+}
+
+body {
+    overflow: visible;
+    height:100%;
+}

@@ -21,13 +21,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+        <script src="{{ asset('js/script.js') }}"></script>
+
         <!-- Scripts -->
         @vite(['resources/css/app.css'])
         @livewireStyles
     </head>
     <body class="antialiased bg-gray-100 overflow-x-hidden lg:overflow-hidden font-primary">
         <!-- Page Heading -->
-        <header class="relative bg-gray-50 h-20 flex items-center lg:px-8 px-2">
+        <header class="sticky top-0 z-50 bg-gray-50 h-20 flex items-center lg:px-8 px-2">
             <x-application-logo class="absolute h-16 fill-current" />
             <h2 class="font-semibold text-xl text-center w-full">
                 @if (isset($header))
@@ -42,7 +45,7 @@
         </header>
 
         <!-- Page Content -->
-        <main class="h-extra lg:flex">
+        <main class="lg:flex">
             @include('layouts.navigation')
 
             <div class="w-full lg:mx-auto px-12 relative overflow-x-auto">
@@ -51,7 +54,6 @@
                 </div>
             </div>
         </main>
-
         @livewireScripts
     </body>
 </html>

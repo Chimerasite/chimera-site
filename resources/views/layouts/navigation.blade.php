@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="z-50 sticky top-0">
+<nav x-data="{ open: false }" class="z-50 sticky" style="top: 80px;">
     <!-- Primary Navigation Menu -->
     <div class="hidden lg:flex flex-col justify-between w-64 bg-gray-800 text-white font-primary h-full sticky top-0">
         <!-- Navigation Links -->
@@ -53,15 +53,15 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div class="lg:hidden flex items-center w-screen h-12 bg-gray-800 font-primary">
+    <div class="lg:hidden flex items-center w-screen bg-gray-800 font-primary">
         <!-- Hamburger -->
-        <div class="flex items-center justify-end w-screen text-white text-2xl px-4 z-50">
-            <button @click="open = ! open">
+        <div class="flex items-center h-12 justify-end w-screen text-white text-2xl px-4 z-50">
+            <button @click="open = ! open" onclick="lockscroll()">
                 <i :class="{'hidden': open, 'inline-flex': ! open }" class="fa-solid fa-bars"></i>
                 <i :class="{'hidden': ! open, 'inline-flex': open }" class="fa-solid fa-xmark"></i>
             </button>
         </div>
-        <div x-show="open" class="absolute top-0 z-40 flex flex-col justify-between w-screen h-extra bg-gray-800 text-white">
+        <div x-cloak x-show="open" class="absolute top-0 z-40 flex flex-col justify-between w-screen nav-height bg-gray-800 text-white">
             <!-- Navigation Links -->
             <div class="flex flex-col space-y-3 mx-10 my-6">
                 <x-nav.responsive-link :href="route('home')" :active="request()->routeIs('home')">

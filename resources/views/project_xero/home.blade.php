@@ -4,7 +4,7 @@
     </x-slot>
     <div class="mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden flex md:flex-row flex-col justify-center shadow-sm rounded-md md:p-8 p-4">
-            <img class="md:h-36 object-scale-down" src="https://cdn.discordapp.com/attachments/829769692712927232/952004926186324069/xero_logo_SMALLxs.png">
+            <img class="md:h-36 object-scale-down" src="{{ asset('assets/img/xero_logo.png') }}">
             <div class="md:px-12 px-6">
                 <h2 class="text-2xl">Welcome to the Project Xero Fan Zone</h2>
                 <p class="mt-1 text-sm">

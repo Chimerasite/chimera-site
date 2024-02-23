@@ -9,6 +9,13 @@
             </x-button.primary>
         </div>
     @endif
+    @if(!Auth::user())
+        <div class="grid xl:grid-cols-1 gap-8 w-full mb-8">
+            <div class="bg-white text-center p-4 rounded-md shadow-md ">
+                To Add your own forages please <a class="underline hover:text-baby-500" href="{{ route('login') }}">login</a> or <a class="underline hover:text-baby-500" href="{{ route('register') }}">create an account</a>.
+            </div>
+        </div>
+    @endif
     <div class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 w-full mb-8">
         <div class="bg-white h-28 p-4 rounded-md shadow-md flex flex-col items-center justify-around">
             @php

@@ -17,6 +17,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+        <script src="{{ asset('js/script.js') }}"></script>
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles

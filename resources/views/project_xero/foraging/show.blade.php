@@ -16,8 +16,5 @@
             </div>
         @endif
     </x-slot>
-    {{-- <a href="{{ route('xero.home') }}">
-        <i class="fa-solid fa-xs fa-chevron-left"></i> {{ __('Return') }}<br><br>
-    </a> --}}
     @livewire('ProjectXero.Foraging.Table', ['massedit' => false])
 </x-app-layout>
