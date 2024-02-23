@@ -11,5 +11,5 @@
             </div>
         @endif
     </x-slot>
-    @livewire('xero-foraging-table', ['massedit' => true])
+    @livewire('ProjectXero.Foraging.Table', ['massedit' => true])
 </x-app-layout>

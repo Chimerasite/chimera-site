@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('color')->unique();
+            $table->string('type');
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->timestamps();
         });
     }

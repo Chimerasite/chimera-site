@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,5 +33,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/xero-fan-zone', [XeroFanController::class, 'home'])->name('xero.home');
 Route::get('/xero-fan-zone/foraging', [XeroFanController::class, 'foragingShow'])->name('xero.foraging');
 Route::get('/xero-fan-zone/foraging/edit', [XeroFanController::class, 'foragingEdit'])->middleware(['auth', 'admin'])->name('xero.foraging-edit');
+Route::get('/xero-fan-zone/foraging/add', [XeroFanController::class, 'foragingAdd'])->middleware(['auth'])->name('xero.foraging-add');
 
 require __DIR__.'/auth.php';

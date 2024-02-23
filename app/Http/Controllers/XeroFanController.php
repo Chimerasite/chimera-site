@@ -21,4 +21,9 @@ class XeroFanController extends Controller
     {
         return view('project_xero.foraging.edit');
     }
+
+    public function foragingAdd()
+    {
+        return view('project_xero.foraging.add');
+    }
 }

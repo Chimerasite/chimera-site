@@ -14,6 +14,9 @@ class XeroForagingLocations extends Model
     protected $fillable = [
         'name',
         'color',
+        'type',
+        'start_date',
+        'end_date',
     ];
 
     public function stats(): HasMany

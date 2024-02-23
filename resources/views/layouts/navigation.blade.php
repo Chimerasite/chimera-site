@@ -10,9 +10,9 @@
                 {{ __('Project Xero Fan Zone') }}
             </x-nav.link>
             @if(Auth::user() && Auth::user()->is_admin == True)
-                <x-nav.link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
-                </x-nav.link>
+                {{-- <x-nav.link href="{{ route('settings') }}" :active="request()->routeIs('settings')">
+                    {{ __('Settings') }}
+                </x-nav.link> --}}
             @endif
         </div>
 
@@ -47,7 +47,7 @@
                     </x-slot>
                 </x-nav.dropdown>
             @else
-                <a href="{{ route('login') }}" class="hover:text-baby-300">Login</a>
+                <a href="{{ route('login') }}" class="hover:text-baby-300">Login</a> | <a href="{{ route('register') }}" class="hover:text-baby-300">Register</a>
             @endif
         </div>
     </div>
@@ -67,9 +67,14 @@
                 <x-nav.responsive-link :href="route('home')" :active="request()->routeIs('home')">
                     {{ __('Home') }}
                 </x-nav.responsive-link>
-                <x-nav.responsive-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
+                <x-nav.responsive-link :href="route('xero.home')" :active="request()->routeIs('xero.*')">
+                    {{ __('Project Xero Fan Zone') }}
                 </x-nav.responsive-link>
+                @if(Auth::user() && Auth::user()->is_admin == True)
+                    {{-- <x-nav.responsive-link href="{{ route('settings') }}" :active="request()->routeIs('settings')">
+                        {{ __('Settings') }}
+                    </x-nav.responsive-link> --}}
+                @endif
             </div>
 
             <!-- Account Data -->
@@ -103,7 +108,7 @@
                         </x-slot>
                     </x-nav.dropdown>
                 @else
-                    <a href="{{ route('login') }}" class="hover:text-baby-300">Login</a>
+                    <a href="{{ route('login') }}" class="hover:text-baby-300">Login</a> | <a href="{{ route('register') }}" class="hover:text-baby-300">Register</a>
                 @endif
             </div>
         </div>

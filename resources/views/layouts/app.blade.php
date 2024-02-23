@@ -7,6 +7,8 @@
 
         <title>{{ config('app.name', 'Chimerasite') }}</title>
 
+        <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -23,9 +25,9 @@
         @vite(['resources/css/app.css'])
         @livewireStyles
     </head>
-    <body class="antialiased bg-gray-100 overflow-x-hidden font-primary">
+    <body class="antialiased bg-gray-100 overflow-x-hidden lg:overflow-hidden font-primary">
         <!-- Page Heading -->
-        <header class="relative bg-gray-50 h-20 flex items-center px-8">
+        <header class="relative bg-gray-50 h-20 flex items-center lg:px-8 px-2">
             <x-application-logo class="absolute h-16 fill-current" />
             <h2 class="font-semibold text-xl text-center w-full">
                 @if (isset($header))
@@ -43,7 +45,7 @@
         <main class="h-extra lg:flex">
             @include('layouts.navigation')
 
-            <div class="w-full lg:mx-auto px-12">
+            <div class="w-full lg:mx-auto px-12 relative overflow-x-auto">
                 <div class="mx-16 my-12 mx-auto">
                     {{ $slot }}
                 </div>
